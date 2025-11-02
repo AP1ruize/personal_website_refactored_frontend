@@ -15,7 +15,7 @@ type Season = "spring" | "summer" | "autumn" | "winter";
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
-  const [userInfo, setUserInfo] = useState<{ email: string } | null>(null);
+  // const [userInfo, setUserInfo] = useState<{ email: string } | null>(null);
   const [season, setSeason] = useState<Season>("spring");
 
   return (
@@ -25,7 +25,7 @@ export default function App() {
       <MusicPlayer season={season} />
 
       {/* 统一头部 & 侧边栏 */}
-      <Header onToggleSideBar={() => setIsOpen(!isOpen)} userInfo={userInfo} />
+      <Header onToggleSideBar={() => setIsOpen(!isOpen)}  />
       <SideNav isOpen={isOpen} />
 
       {/* 主内容：侧边栏展开时右移 */}

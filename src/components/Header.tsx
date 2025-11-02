@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import { Menu, Globe } from "lucide-react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 interface HeaderProps {
   onToggleSideBar: () => void;
-  userInfo: { email: string } | null;
+  // userInfo: { email: string } | null;
 }
 
-export default function Header({ onToggleSideBar, userInfo }: HeaderProps) {
+export default function Header({ onToggleSideBar }: HeaderProps) {
     const { i18n } = useTranslation();
 
   const toggleLang = () => {
