@@ -1,0 +1,77 @@
+{
+    "sidenav":{
+        "home": "Home",
+        "gallery": "Gallery (Refactoring)",
+        "career": "Career"
+    },
+    "home": {
+        "title": "Welcome!",
+        "text1_title": "This is Ethan's personal website. Use the sidebar to explore different sections — Gallery, Career.",
+        "text1": "Recruiters can visit the Career tab to view my professional profile.",
+        "anime_bg_title":"🌸|☀️|🍁|❄️ Seasonal Animation Background",
+        "anime_bg":"Background and music adapt automatically based on the season."
+    },
+  "career": {
+    "title": "Career",
+    "intro_1": "👋 Hello! I’m Ruize (Ethan) Sheng.",
+    "intro_2": "I hold an MEng in Computer Engineering from Carleton University and have 2 years of experience designing, developing, and deploying full-stack web applications with React, TypeScript, and Java Spring Boot.",
+    "intro_3": "I love building performant, scalable systems that combine elegant design with robust engineering — whether on the front end (React, Tailwind, Next.js) or backend (Java, Spring Boot, Node.js, Python FastAPI).",
+    "experience_title": "💼 Work Experience",
+    "experience": [
+      {
+        "position": "Software Developer @ Evosmarter (2025–Present)",
+        "details": [
+          "Built a GPT-based AI shopping assistant and e-commerce frontend.",
+          "Integrated chatbot UI with real-time LLM API (SSE) for sub-second response and +20% user session time.",
+          "Developed responsive React/Next.js components improving load speed by 25%.",
+          "Worked cross-functionally with AI and backend teams in Agile sprints, shortening release cycles by 20%."
+        ]
+      },
+      {
+        "position": "Software Engineer @ Meng’s Academy Tax Services (2024–2025)",
+        "details": [
+          "Developed optimized Spring Boot microservices with PostgreSQL & MongoDB for 20k+ users.",
+          "Built OAuth2 SSO in Spring Cloud Gateway; implemented caching and async handling with Redis & RabbitMQ.",
+          "Redesigned React tax UI improving completion rate by 38%.",
+          "Automated AWS Lambda archiving (RDS→S3/Glacier), cutting storage cost by 67%.",
+          "Built React + D3.js + FastAPI dashboard improving decision efficiency by 40%."
+        ]
+      },
+      {
+        "position": "Software Developer Intern @ Neusoft Technology (2021)",
+        "details": [
+          "Built an online food ordering platform using Qt (C++) + MySQL backend with 300K+ records.",
+          "Refactored and optimized database queries, improving reliability and responsiveness."
+        ]
+      }
+    ],
+    "skills_title": "🧠 Technical Skills",
+    "skills": [
+      "Frontend: React, TypeScript, Next.js, Tailwind CSS, HTML, CSS",
+      "Backend: Java (Spring Boot, Hibernate), Node.js (Express), Python (FastAPI)",
+      "Cloud & DevOps: AWS, Docker, Kubernetes, Jenkins, Nginx, Terraform",
+      "Databases: PostgreSQL, MySQL, MongoDB, Redis, DynamoDB",
+      "Testing & Tools: JUnit, Jest, Git, Postman, Shell, Linux/Windows"
+    ],
+    "projects_title": "🚀 Featured Projects",
+    "projects": [
+      {
+        "name": "Personal Website (React + Node.js + MongoDB)",
+        "url": "https://github.com/AP1ruize/personal-website-frontend-reactjs"
+      },
+      {
+        "name": "Library Management System (Java, Oracle DB)",
+        "url": "https://github.com/AP1ruize/oracle_assig"
+      },
+      {
+        "name": "Online Exam System (Java EE, MySQL)",
+        "url": "https://github.com/AP1ruize/online_exam_system_j2ee"
+      },
+      {
+        "name": "Sentiment Classification of Movie Reviews (Python)",
+        "url": "https://github.com/AP1ruize/sentiment_classfication_of_movie_reviews_3rd_yrs_proj"
+      }
+    ],
+    "switch_lang": "中文"
+  }
+}

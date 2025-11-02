@@ -1,0 +1,77 @@
+{
+    "sidenav":{
+        "home": "主页",
+        "gallery": "相册 （重构中）",
+        "career": "职业经历"
+    },
+    "home": {
+        "title": "欢迎!",
+        "text1_title": "这是 盛瑞泽 Ethan 的个人网站。使用侧边栏可以浏览不同的板块——图库、职业经历。",
+        "text1": "招聘人员可以通过“职业经历”板块查看我的专业资料。",
+        "anime_bg_title":"🌸|☀️|🍁|❄️ 季节动画背景",
+        "anime_bg":"背景和音乐会根据季节自动变化。"
+    },
+  "career": {
+    "title": "职业经历",
+    "intro_1": "👋 你好！我是盛瑞泽（Ethan Sheng）。",
+    "intro_2": "我拥有加拿大卡尔顿大学计算机工程硕士学位，吉林大学软件工程本科学士学位，拥有两年全栈开发经验，熟悉 React、TypeScript、Java Spring Boot 等技术。",
+    "intro_3": "我热衷于构建高性能、可扩展的系统，将优雅的设计与稳健的工程实践结合——无论是前端（React、Tailwind、Next.js）还是后端（Java、Spring Boot、Node.js、Python FastAPI）。",
+    "experience_title": "💼 工作经验",
+    "experience": [
+      {
+        "position": "软件开发工程师 | Evosmarter (2025–至今)",
+        "details": [
+          "开发 GPT 驱动的 AI 购物助手与电商前端。",
+          "集成实时 LLM API (SSE)，实现亚秒级响应并提升用户会话时长 20%。",
+          "使用 React/Next.js 构建响应式组件，使页面加载速度提升 25%。",
+          "与 AI 与后端团队协作，敏捷开发中将迭代周期缩短 20%。"
+        ]
+      },
+      {
+        "position": "软件工程师 | Meng’s Academy Tax Services (2024–2025)",
+        "details": [
+          "使用 Spring Boot + PostgreSQL + MongoDB 开发微服务，为 2 万+ 用户提供支持。",
+          "在 Spring Cloud Gateway 中实现 OAuth2 单点登录，并结合 Redis 与 RabbitMQ 实现缓存与异步处理。",
+          "重构 React 报税前端界面，使任务完成率提升 38%。",
+          "使用 AWS Lambda 自动归档数据（RDS→S3/Glacier），云存储成本降低 67%。",
+          "通过 React + D3.js + FastAPI 构建数据可视化仪表盘，使决策效率提升 40%。"
+        ]
+      },
+      {
+        "position": "软件开发实习生 | 东软集团 (2021)",
+        "details": [
+          "使用 Qt (C++) + MySQL 开发在线点餐系统（30 万条记录）。",
+          "优化数据库查询与索引结构，提高系统稳定性与响应速度。"
+        ]
+      }
+    ],
+    "skills_title": "🧠 技术技能",
+    "skills": [
+      "前端：React、TypeScript、Next.js、Tailwind CSS、HTML、CSS",
+      "后端：Java (Spring Boot, Hibernate)、Node.js (Express)、Python (FastAPI)",
+      "云与 DevOps：AWS、Docker、Kubernetes、Jenkins、Nginx、Terraform",
+      "数据库：PostgreSQL、MySQL、MongoDB、Redis、DynamoDB",
+      "测试与工具：JUnit、Jest、Git、Postman、Shell、Linux/Windows"
+    ],
+    "projects_title": "🚀 项目展示",
+    "projects": [
+      {
+        "name": "个人网站（React + Node.js + MongoDB）",
+        "url": "https://github.com/AP1ruize/personal-website-frontend-reactjs"
+      },
+      {
+        "name": "图书馆管理系统（Java, Oracle DB）",
+        "url": "https://github.com/AP1ruize/oracle_assig"
+      },
+      {
+        "name": "在线考试系统（Java EE, MySQL）",
+        "url": "https://github.com/AP1ruize/online_exam_system_j2ee"
+      },
+      {
+        "name": "影评情感分类项目（Python）",
+        "url": "https://github.com/AP1ruize/sentiment_classfication_of_movie_reviews_3rd_yrs_proj"
+      }
+    ],
+    "switch_lang": "English"
+  }
+}
