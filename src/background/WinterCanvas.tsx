@@ -9,29 +9,32 @@ const WinterCanvas = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // ❄️ 初始化雪花
+    // 初始化雪花
     const snow = Array.from({ length: 120 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       r: 1 + Math.random() * 3,
-      speed: 0.25 + Math.random() * 0.75,
+      speed: 0.5 + Math.random() * 1.5,
       swingOffset: Math.random() * 1000, // 每片雪的相位
     }));
 
     let frame = 0;
+    let frameId: number;
+    let lastTime = 0;
+    const fps = 30;
+    const interval = 1000 / fps;
+    const startTime = performance.now() + 600;
 
-    const draw = () => {
+    const draw = (time: number) => {
+      frameId = requestAnimationFrame(draw);
+      if (time < startTime || time - lastTime < interval) return;
+      lastTime = time;
+
+
       frame++;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // 🌌 背景
-      // const bg = ctx.createLinearGradient(0, 0, 0, canvas.height);
-      // bg.addColorStop(0, "#0b132b");
-      // bg.addColorStop(1, "#1c2541");
-      // ctx.fillStyle = bg;
-      // ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      // ❄️ 绘制雪花
+      // 绘制雪花
       ctx.fillStyle = "rgba(255,255,255,0.9)";
       ctx.beginPath();
       snow.forEach(s => {
@@ -40,11 +43,11 @@ const WinterCanvas = () => {
       });
       ctx.fill();
 
-      // 🎐 更新雪花位置
+      //  更新雪花位置
       snow.forEach(s => {
         // 向下落
         s.y += s.speed;
-        // 🌬️ 独立的轻微水平漂移（更自然）
+        // 独立的轻微水平漂移
         const sway = Math.sin((frame + s.swingOffset) * 0.01) * 0.1;
         s.x += sway;
 
@@ -55,10 +58,12 @@ const WinterCanvas = () => {
         }
       });
 
-      requestAnimationFrame(draw);
+      // requestAnimationFrame(draw);
     };
 
-    draw();
+    // draw();
+    frameId = requestAnimationFrame(draw);
+    return () => cancelAnimationFrame(frameId);
   }, []);
 
   return (
@@ -91,4 +96,5 @@ const WinterCanvas = () => {
   );
 };
 
-export default WinterCanvas;
+// export default WinterCanvas;
+export default React.memo(WinterCanvas);

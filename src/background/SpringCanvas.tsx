@@ -9,6 +9,11 @@ const SpringCanvas = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
+    //预加载
+    const petalImg = new Image();
+    petalImg.src = "/sakura_li.png";
+    petalImg.decode?.().catch(() => {});
+
     const petals = Array.from({ length: 35 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
@@ -28,7 +33,18 @@ const SpringCanvas = () => {
 
     let frame = 0;
 
-    const draw = () => {
+    //帧率限制
+    let frameId: number;
+    let lastTime = 0;
+    const fps = 30;
+    const interval = 1000 / fps;
+    const startTime = performance.now() + 600;
+
+    const draw = (time: number) => {
+      frameId = requestAnimationFrame(draw);
+      if (time < startTime || time - lastTime < interval) return; //帧率限制
+      lastTime = time;
+
         frame++;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         petals.forEach(p => {
@@ -61,9 +77,11 @@ const SpringCanvas = () => {
         ctx.drawImage(p.img, -p.size / 2, -p.size / 2, p.size, p.size);
         ctx.restore();
       });
-      requestAnimationFrame(draw);
+      // requestAnimationFrame(draw);
     };
-    draw();
+    // draw();
+    frameId = requestAnimationFrame(draw);
+    return () => cancelAnimationFrame(frameId);
   }, []);
 
   return (
@@ -98,4 +116,5 @@ const SpringCanvas = () => {
   );
 };
 
-export default SpringCanvas;
+// export default SpringCanvas;
+export default React.memo(SpringCanvas);

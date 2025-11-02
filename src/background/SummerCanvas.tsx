@@ -9,11 +9,11 @@ const SummerCanvas = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // ☀️ 光束配置
+    // 光束配置
     const rayCount = 8;
     const areaStartX = canvas.width * 0.55; // 光束起点区域（右侧 1/3）
     const areaEndX = canvas.width * 0.95;
-    const spacing = (areaEndX - areaStartX) / rayCount; // ✅ 固定间距
+    const spacing = (areaEndX - areaStartX) / rayCount; // 固定间距
 
     const rays = Array.from({ length: rayCount }, (_, i) => ({
       x: areaStartX + i * spacing,
@@ -22,35 +22,46 @@ const SummerCanvas = () => {
       bottomWidth: 200,
       h: canvas.height * 0.8,
       opacity: 0.06 + Math.random() * 0.06,
-      speed: 0.03, // 慢速平滑移动
+      speed: 0.08, // 慢速平滑移动
       tilt: -0.2 + Math.random() * 0.1,
     }));
 
-    // 🌤️ 阳光浮尘粒子配置
+    // 阳光浮尘粒子配置
     const dustCount = 150;
     const dust = Array.from({ length: dustCount }, () => ({
       x: areaStartX + Math.random() * (areaEndX - areaStartX),
       y: Math.random() * canvas.height * 0.8,
       r: 0.5 + Math.random() * 1.5,
-      speedY: 0.1 + Math.random() * 0.2,
+      speedY: 0.3 + Math.random() * 0.5,
       alphaBase: 0.3 + Math.random() * 0.5,
       phase: Math.random() * 1000,
     }));
 
     let frame = 0;
 
-    const draw = () => {
+    let frameId: number;
+    let lastTime = 0;
+    const fps = 30;
+    const interval = 1000 / fps;
+    const startTime = performance.now() + 600;
+
+    const draw = (time: number) => {
+      frameId = requestAnimationFrame(draw);
+      if (time < startTime || time - lastTime < interval) return; // 控制帧率
+      lastTime = time;
+
+
       frame++;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // 🌄 背景光雾层
+      // 背景光雾层
       const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
       gradient.addColorStop(0, "rgba(255,255,240,0.08)");
       gradient.addColorStop(1, "rgba(255,255,240,0)");
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // ☀️ 绘制光束（上窄下宽梯形）
+      // 绘制光束（上窄下宽梯形）
       rays.forEach(r => {
         const topHalf = r.topWidth / 2;
         const bottomHalf = r.bottomWidth / 2;
@@ -70,14 +81,14 @@ const SummerCanvas = () => {
         ctx.closePath();
         ctx.fill();
 
-        // 🌈 光线水平漂移
+        // 光线水平漂移
         r.x += r.speed;
         if (r.x - r.bottomWidth / 2 > areaEndX) {
           r.x = areaStartX - r.bottomWidth / 2;
         }
       });
 
-      // 🌤️ 绘制阳光浮尘粒子
+      // 绘制阳光浮尘粒子
       dust.forEach(p => {
         const alpha = p.alphaBase + Math.sin((frame + p.phase) * 0.02) * 0.2;
         ctx.globalAlpha = Math.max(0, Math.min(1, alpha));
@@ -100,10 +111,12 @@ const SummerCanvas = () => {
       });
 
       ctx.globalAlpha = 1;
-      requestAnimationFrame(draw);
+      // requestAnimationFrame(draw);
     };
 
-    draw();
+    // draw();
+    frameId = requestAnimationFrame(draw);
+    return () => cancelAnimationFrame(frameId);
   }, []);
 
   return (
@@ -116,7 +129,7 @@ const SummerCanvas = () => {
       height: "100vh",
       overflow: "hidden",
       zIndex: -10,
-      backgroundImage: 'url("/summer_bg.jpg")', // 🌸 背景图片路径
+      backgroundImage: 'url("/summer_bg.jpg")', // 背景图片路径
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}
@@ -136,4 +149,5 @@ const SummerCanvas = () => {
   );
 };
 
-export default SummerCanvas;
+// export default SummerCanvas;
+export default React.memo(SummerCanvas);

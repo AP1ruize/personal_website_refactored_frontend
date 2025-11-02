@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import SeasonalBackground from "./background/SeasonalBackground"; // ✅ 现在有这个文件了
+import SeasonalBackground from "./background/SeasonalBackground";
 import MusicPlayer from "./components/MusicPlayer";
+// import SeasonalBackground from "./background/OptimizedSeasonalBackground";
+// import MusicPlayer from "./components/OptimizedMusicPlayer";
+
 import Header from "./components/Header";
 import SideNav from "./components/SideNav";
 import Home from "./pages/Home";
