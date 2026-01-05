@@ -57,7 +57,15 @@
     "projects_title": "🚀 Featured Projects",
     "projects": [
       {
-        "name": "Personal Website (React + Node.js + MongoDB)",
+        "name": "New Personal Website (React + TypeScript + Canvas, THIS SITE)",
+        "url": "https://github.com/AP1ruize/personal_website_refactored_frontend"
+      },
+      {
+        "name": "Room Decoration Website (React + Three.js), Please Visit the Room Tab to Explore",
+        "url": "https://github.com/AP1ruize/room-decor"
+      },
+      {
+        "name": "Old Personal Website (React + Node.js + MongoDB)",
         "url": "https://github.com/AP1ruize/personal-website-frontend-reactjs"
       },
       {
