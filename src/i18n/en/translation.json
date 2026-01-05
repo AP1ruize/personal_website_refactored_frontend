@@ -2,7 +2,8 @@
     "sidenav":{
         "home": "Home",
         "gallery": "Gallery (Refactoring)",
-        "career": "Career"
+        "career": "Career",
+        "room": "3D Room"
     },
     "home": {
         "title": "Welcome!",

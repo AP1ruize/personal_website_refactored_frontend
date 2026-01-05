@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import SideNav from "./components/SideNav";
 import Home from "./pages/Home";
 import Career from "./pages/Career";
+import Room from "./pages/Room";
 import "./App.css";
 
 type Season = "spring" | "summer" | "autumn" | "winter";
@@ -33,6 +34,14 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/career" element={<Career />} />
+          {/* <Route path="/room" element={<Room />} /> */}
+          <Route path="/room"
+            element={
+              <div className="full-width-page">
+                <Room />
+              </div>
+            }
+          />
           {/* 其他页面后续继续加，比如：
               <Route path="/gallery" element={<Gallery />} />
               

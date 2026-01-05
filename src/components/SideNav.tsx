@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Home, Image, Briefcase } from "lucide-react";
+import { Home, Image, Briefcase, PaintRoller } from "lucide-react";
 
 interface SideNavProps {
   isOpen: boolean;
@@ -15,6 +15,7 @@ export default function SideNav({ isOpen }: SideNavProps) {
     { icon: Home, label: t("sidenav.home"), path: "/", disabled: false },
     { icon: Image, label: t("sidenav.gallery"), path: "/gallery", disabled: true },
     { icon: Briefcase, label: t("sidenav.career"), path: "/career", disabled: false },
+    { icon: PaintRoller, label: t("sidenav.room"), path: "/room", disabled: false },
   ];
 
   return (

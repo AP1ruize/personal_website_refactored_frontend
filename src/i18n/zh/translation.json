@@ -2,7 +2,9 @@
     "sidenav":{
         "home": "主页",
         "gallery": "相册 （重构中）",
-        "career": "职业经历"
+        "career": "职业经历",
+        "room": "3D房间"
+
     },
     "home": {
         "title": "欢迎!",

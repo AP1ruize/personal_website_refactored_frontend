@@ -41,3 +41,30 @@
 .read-the-docs {
   color: #888;
 }
+
+.full-width-page {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(-50vw + 50%);
+  align-items: center;
+  align-self: center;
+}
+
+.room-page-wrapper {
+  /* 居中 */
+  margin: 0 auto;
+
+  /* 控制最大宽度（你可以微调） */
+  max-width: 1200px;
+
+  /* 左右留背景 */
+  padding-left: 40px;
+  padding-right: 40px;
+
+  /* 避开 Header */
+  padding-top: 80px;
+
+  /* 让 iframe 区域居中 */
+  display: flex;
+  justify-content: center;
+}
