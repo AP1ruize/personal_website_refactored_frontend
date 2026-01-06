@@ -15,7 +15,7 @@
   "career": {
     "title": "Career",
     "intro_1": "👋 Hello! I’m Ruize (Ethan) Sheng.",
-    "intro_2": "I hold an MEng in Computer Engineering from Carleton University and have 2 years of experience designing, developing, and deploying full-stack web applications with React, TypeScript, and Java Spring Boot.",
+    "intro_2": "I hold an MEng in Computer Engineering from Carleton University and have 1+ years of experience designing, developing, and deploying full-stack web applications with React, TypeScript, and Java Spring Boot.",
     "intro_3": "I love building performant, scalable systems that combine elegant design with robust engineering — whether on the front end (React, Tailwind, Next.js) or backend (Java, Spring Boot, Node.js, Python FastAPI).",
     "experience_title": "💼 Work Experience",
     "experience": [
@@ -23,9 +23,9 @@
         "position": "Software Developer @ Evosmarter (2025–Present)",
         "details": [
           "Built a GPT-based AI shopping assistant and e-commerce frontend.",
-          "Integrated chatbot UI with real-time LLM API (SSE) for sub-second response and +20% user session time.",
-          "Developed responsive React/Next.js components improving load speed by 25%.",
-          "Worked cross-functionally with AI and backend teams in Agile sprints, shortening release cycles by 20%."
+          "Integrated chatbot UI with real-time LLM API (SSE) for sub-second response and enhance user session time.",
+          "Developed responsive React/Next.js components improving load performance.",
+          "Worked cross-functionally with AI and backend teams in Agile sprints, shortening release cycles."
         ]
       },
       {
@@ -33,9 +33,9 @@
         "details": [
           "Developed optimized Spring Boot microservices with PostgreSQL & MongoDB for 20k+ users.",
           "Built OAuth2 SSO in Spring Cloud Gateway; implemented caching and async handling with Redis & RabbitMQ.",
-          "Redesigned React tax UI improving completion rate by 38%.",
-          "Automated AWS Lambda archiving (RDS→S3/Glacier), cutting storage cost by 67%.",
-          "Built React + D3.js + FastAPI dashboard improving decision efficiency by 40%."
+          "Redesigned React tax UI improving completion rate.",
+          "Automated AWS Lambda archiving (RDS→S3/Glacier), cutting storage cost.",
+          "Built React + D3.js + Python dashboard improving decision efficiency."
         ]
       },
       {
@@ -49,7 +49,7 @@
     "skills_title": "🧠 Technical Skills",
     "skills": [
       "Frontend: React, TypeScript, Next.js, Tailwind CSS, HTML, CSS",
-      "Backend: Java (Spring Boot, Hibernate), Node.js (Express), Python (FastAPI)",
+      "Backend: Java (Spring Boot, Hibernate), Node.js (Express), Python (Django, FastAPI)",
       "Cloud & DevOps: AWS, Docker, Kubernetes, Jenkins, Nginx, Terraform",
       "Databases: PostgreSQL, MySQL, MongoDB, Redis, DynamoDB",
       "Testing & Tools: JUnit, Jest, Git, Postman, Shell, Linux/Windows"
